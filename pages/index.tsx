@@ -1,25 +1,25 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
-import IPlaylist from '../interfaces/playlist';
-import ISong from '../interfaces/playlist/song';
+import ICreatePlaylist from '../interfaces/playlist';
+import ICreateSong from '../interfaces/playlist/song';
 
 export default function IndexPage({
   data,
 }: {
-  data: IPlaylist;
+  data: ICreatePlaylist;
 }): React.ReactElement {
   return <h1>{data.name}</h1>;
 }
 
 export const getStaticProps: GetStaticProps = async (_) => {
-  const songs: ISong[] = [
+  const songs: ICreateSong[] = [
     {
       name: 'Song 1',
       duration: 21334,
     },
   ];
-  const data: IPlaylist = {
-    name: 'New Playlist',
+  const data: ICreatePlaylist = {
+    name: 'Newo Playlist',
     createdAt: 213890,
     ownerId: 1,
     songs,

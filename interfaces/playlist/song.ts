@@ -1,4 +1,6 @@
-export default interface ISong {
-  name: string;
-  duration: number;
+import { ISong } from '../../database/playlist/song';
+
+export default interface ICreateSong {
+  name: ISong['name'];
+  duration: ISong['duration'];
 }

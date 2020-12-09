@@ -1,9 +1,9 @@
-import ISong from './song';
+import { IPlaylist } from '../../database/playlist';
 
-export default interface IPlaylist {
-  name: string;
-  createdAt: number;
-  ownerId: number;
-  songs: ISong[];
-  favSongsIndexes: number[];
+export default interface ICreatePlaylist {
+  name: IPlaylist['name'];
+  createdAt: IPlaylist['createdAt'];
+  ownerId: IPlaylist['ownerId'];
+  songs: IPlaylist['songs'];
+  favSongsIndexes: IPlaylist['favSongsIndexes'];
 }
