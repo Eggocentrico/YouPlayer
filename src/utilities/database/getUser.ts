@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
-import User from '../../database/user';
+import { User } from '../../database';
 import ICreateUser from '../../interfaces/user';
 
 mongoose.connect('mongodb://localhost:27017/yt-player', {

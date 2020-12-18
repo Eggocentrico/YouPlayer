@@ -9,12 +9,10 @@ export interface IUser extends Document {
   favPlaylistsIndexes: number[];
 }
 
-const UserSchema: Schema = new Schema({
+export const UserSchema: Schema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   playlist: { type: [PlaylistSchema], required: true },
   favPlaylistsIndexes: { type: [Number], required: true },
 });
-
-export default mongoose.model<IUser>('User', UserSchema);

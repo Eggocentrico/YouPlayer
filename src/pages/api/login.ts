@@ -1,0 +1,8 @@
+import NextAuth from 'next-auth';
+import Providers from 'next-auth/providers';
+
+export default function handler(req, res) {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'application/json');
+  res.end(JSON.stringify({ success: true }));
+}

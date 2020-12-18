@@ -46,32 +46,11 @@ export default function IndexPage(): React.ReactElement {
                 email,
                 password,
               };
-              Axios.post('/api/signup', formData).then((r) => {
-                if (r.data.success) router.push('/user/signedup');
+              Axios.post('/api/login', formData).then((r) => {
+                if (r.data.success) router.push('/app');
               });
             }}
           >
-            <Label
-              htmlFor="username"
-              sx={{ fontFamily: 'body', fontWeight: 600 }}
-            >
-              Username
-            </Label>
-            <Input
-              name="username"
-              id="username"
-              placeholder="someusername"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              sx={{
-                mb: '1rem',
-                mt: '.5rem',
-                border: '1px solid #0A0A0A',
-                bg: '#141414',
-                fontFamily: 'body',
-              }}
-              required
-            ></Input>
             <Label htmlFor="email" sx={{ fontFamily: 'body', fontWeight: 600 }}>
               Email
             </Label>
@@ -118,7 +97,7 @@ export default function IndexPage(): React.ReactElement {
             <Button
               sx={{ fontFamily: 'body', fontWeight: 600, color: 'muted' }}
             >
-              Create new account
+              Login
             </Button>
           </Box>
         </Card>
