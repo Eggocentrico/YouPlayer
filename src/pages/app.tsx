@@ -9,7 +9,7 @@ export default function IndexPage(): React.ReactElement {
     <div className="main">
       <Navbar name="jhonatan"></Navbar>
       <Card sx={{ bg: 'muted', p: '1rem' }}>
-        <p>Hello</p>
+        <p>Work in progress, Jhonatan David Asprilla Arango</p>
       </Card>
     </div>
   );
