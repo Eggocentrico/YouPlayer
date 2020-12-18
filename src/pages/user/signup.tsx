@@ -40,7 +40,7 @@ export default function IndexPage(): React.ReactElement {
               display: 'flex',
               flexDirection: 'column',
             }}
-            onSubmit={(e) => {
+            onSubmit={(e: React.FormEvent) => {
               e.preventDefault();
               const formData = {
                 username,
@@ -63,7 +63,9 @@ export default function IndexPage(): React.ReactElement {
               id="username"
               placeholder="someusername"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setUsername(e.target.value)
+              }
               sx={{
                 mb: '1rem',
                 mt: '.5rem',
@@ -82,7 +84,9 @@ export default function IndexPage(): React.ReactElement {
               id="email"
               placeholder="something@domain.com"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
               sx={{
                 mb: '1rem',
                 mt: '.5rem',
@@ -104,7 +108,9 @@ export default function IndexPage(): React.ReactElement {
               id="password"
               placeholder="somepassword"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setPassword(e.target.value)
+              }
               sx={{
                 mb: '2rem',
                 mt: '.5rem',

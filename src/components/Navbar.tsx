@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react';
-import { Button, jsx } from 'theme-ui';
+const { Button, jsx } = require('theme-ui');
 import Link from 'next/link';
 
 export default function Navbar({
