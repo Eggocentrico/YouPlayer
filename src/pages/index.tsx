@@ -2,7 +2,8 @@
 
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-import { Card, jsx } from 'theme-ui';
+import { jsx } from 'theme-ui';
+const { Card } = require('theme-ui');
 import Navbar from '../components/Navbar';
 
 export default function IndexPage(): React.ReactElement {

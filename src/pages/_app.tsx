@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'theme-ui';
+const { ThemeProvider } = require('theme-ui');
 import type { AppProps } from 'next/app';
 import theme from '../utilities/theming/theme';
 

@@ -1,7 +1,8 @@
 /** @jsx jsx */
 
 import { GetStaticProps } from 'next';
-import { Card, jsx } from 'theme-ui';
+import { jsx } from 'theme-ui';
+const { Card } = require('theme-ui');
 import Navbar from '../components/Navbar';
 
 export default function IndexPage(): React.ReactElement {

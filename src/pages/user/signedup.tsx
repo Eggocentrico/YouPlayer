@@ -1,6 +1,7 @@
 /** @jsx jsx */
 
-import { Card, jsx } from 'theme-ui';
+import { jsx } from 'theme-ui';
+const { Card } = require('theme-ui');
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import { GetStaticProps } from 'next';

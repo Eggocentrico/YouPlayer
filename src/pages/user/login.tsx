@@ -3,12 +3,12 @@
 import Axios from 'axios';
 import { useRouter } from 'next/dist/client/router';
 import React, { useState } from 'react';
-import { Box, Card, Label, jsx, Input, Button } from 'theme-ui';
+import { jsx } from 'theme-ui';
+const { Box, Card, Label, Input, Button } = require('theme-ui');
 import Navbar from '../../components/Navbar';
 
 export default function IndexPage(): React.ReactElement {
   const router = useRouter();
-  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -42,7 +42,6 @@ export default function IndexPage(): React.ReactElement {
             onSubmit={(e) => {
               e.preventDefault();
               const formData = {
-                username,
                 email,
                 password,
               };
@@ -64,7 +63,6 @@ export default function IndexPage(): React.ReactElement {
               sx={{
                 mb: '1rem',
                 mt: '.5rem',
-                border: 'none',
                 bg: '#141414',
                 border: '1px solid #0A0A0A',
                 fontFamily: 'body',
@@ -87,7 +85,6 @@ export default function IndexPage(): React.ReactElement {
               sx={{
                 mb: '2rem',
                 mt: '.5rem',
-                border: 'none',
                 bg: '#141414',
                 border: '1px solid #0A0A0A',
                 fontFamily: 'body',
